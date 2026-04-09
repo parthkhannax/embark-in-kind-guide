@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-539TGQMN');</script>
+    <!-- End Google Tag Manager -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What Does "In Kind" Mean? A Guide for Portfolio Transfers | Embark Funds</title>
+    <meta name="description" content="Learn what in-kind transfers mean, how ACAT works, tax implications, and how Embark's SPV model lets you earn income from concentrated stock without selling.">
+    <meta name="keywords" content="in kind transfer, ACAT transfer, portfolio transfer, concentrated stock, tax efficient, exchange fund, SPV, Embark Funds">
+    <link rel="canonical" href="https://www.embarkfunds.com/blog/in-kind-transfers-guide">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="What Does 'In Kind' Mean? A Guide for Portfolio Transfers">
+    <meta property="og:description" content="The complete guide to in-kind transfers — preserve your cost basis, avoid taxable events, and unlock income from concentrated stock.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.embarkfunds.com/blog/in-kind-transfers-guide">
+    <meta property="og:image" content="https://www.embarkfunds.com/images/brand/embark-logo.webp">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://www.embarkfunds.com/images/brand/embark-logo.webp">
+
+    <!-- Fonts: Playfair Display (Serif) & Inter (Sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bh: {
+                            black: '#0f172a',
+                            dark: '#1e293b',
+                            gray: '#334155',
+                            text: '#e2e8f0',
+                            muted: '#94a3b8',
+                            gold: '#C9A961',
+                            accent: '#ffffff',
+                            beige: '#F5F5F0',
+                            textGray: '#334155'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Inter"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* ── Scroll Progress ── */
+        #scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 3px;
+            background: linear-gradient(90deg, #C9A961 0%, #ffffff 100%);
+            z-index: 9999;
+            transition: width 0.1s ease;
+            box-shadow: 0 0 20px rgba(201, 169, 97, 0.8);
+        }
+
+        /* ── Body ── */
+        body {
+            animation: fadeInBody 0.8s ease-out;
+        }
+        @keyframes fadeInBody {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* ── Custom Scrollbar ── */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #0f172a; }
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #C9A961 0%, #a07d4a 100%);
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(180deg, #d4b56f 0%, #C9A961 100%);
+        }
+
+        /* ── Article Prose ── */
+        .article-prose h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.25rem;
+            font-weight: 600;
+            color: #ffffff;
+            margin-top: 4rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(201, 169, 97, 0.2);
+            line-height: 1.2;
+        }
+        .article-prose h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: #e2e8f0;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+        .article-prose p {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.075rem;
+            line-height: 1.85;
+            color: #94a3b8;
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+        }
+        .article-prose ul, .article-prose ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+        .article-prose li {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.075rem;
+            line-height: 1.85;
+            color: #94a3b8;
+            margin-bottom: 0.75rem;
+            font-weight: 300;
+        }
+        .article-prose ul li { list-style-type: disc; }
+        .article-prose ol li { list-style-type: decimal; }
+        .article-prose strong {
+            color: #e2e8f0;
+            font-weight: 600;
+        }
+        .article-prose a {
+            color: #C9A961;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            transition: color 0.3s ease;
+        }
+        .article-prose a:hover {
+            color: #ffffff;
+        }
+
+        /* ── Callout Box ── */
+        .callout-box {
+            background: rgba(201, 169, 97, 0.06);
+            border-left: 4px solid #C9A961;
+            border-radius: 0 12px 12px 0;
+            padding: 1.75rem 2rem;
+            margin: 2rem 0;
+            position: relative;
+        }
+        .callout-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            border: 1px solid rgba(201, 169, 97, 0.1);
+            border-left: none;
+            border-radius: 0 12px 12px 0;
+            pointer-events: none;
+        }
+        .callout-box p {
+            color: #e2e8f0 !important;
+            font-size: 1rem !important;
+            margin-bottom: 0 !important;
+        }
+
+        /* ── Scenario Box ── */
+        .scenario-box {
+            background: linear-gradient(135deg, rgba(30, 41, 59, 0.8), rgba(15, 23, 42, 0.9));
+            border: 1px solid rgba(201, 169, 97, 0.15);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin: 2.5rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .scenario-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #C9A961, transparent);
+        }
+
+        /* ── Section Number ── */
+        .section-num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            border: 1.5px solid rgba(201, 169, 97, 0.4);
+            color: #C9A961;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-right: 0.75rem;
+            flex-shrink: 0;
+        }
+
+        /* ── Table of Contents ── */
+        .toc-link {
+            display: flex;
+            align-items: center;
+            padding: 0.6rem 0;
+            color: #94a3b8;
+            font-size: 0.8rem;
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            letter-spacing: 0.01em;
+        }
+        .toc-link:hover, .toc-link.active {
+            color: #C9A961;
+        }
+        .toc-link.active {
+            font-weight: 500;
+        }
+
+        /* ── Comparison Table ── */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .comparison-table th {
+            text-align: left;
+            padding: 1rem 1.25rem;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: #94a3b8;
+            border-bottom: 2px solid rgba(201, 169, 97, 0.15);
+        }
+        .comparison-table td {
+            padding: 1rem 1.25rem;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            color: #94a3b8;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            font-weight: 300;
+        }
+        .comparison-table tr:hover td {
+            background: rgba(201, 169, 97, 0.03);
+        }
+        .comparison-table .embark-col {
+            color: #C9A961;
+            font-weight: 500;
+        }
+        .comparison-table .row-label {
+            color: #e2e8f0;
+            font-weight: 500;
+            font-size: 0.85rem;
+        }
+
+        /* ── Checklist ── */
+        .checklist-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+        }
+        .checklist-item:last-child { border-bottom: none; }
+        .check-icon {
+            width: 24px;
+            height: 24px;
+            border-radius: 6px;
+            border: 1.5px solid rgba(201, 169, 97, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 2px;
+            color: #C9A961;
+            font-size: 0.6rem;
+        }
+
+        /* ── Flowchart / Infographic ── */
+        .flowchart-card {
+            background: rgba(30, 41, 59, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 1.75rem;
+            text-align: center;
+            transition: all 0.4s ease;
+        }
+        .flowchart-card:hover {
+            border-color: rgba(201, 169, 97, 0.3);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+        }
+        .flowchart-arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #C9A961;
+            font-size: 1.5rem;
+            padding: 0.5rem;
+        }
+
+        /* ── Calculator Embed ── */
+        .calculator-embed {
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid rgba(201, 169, 97, 0.15);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+        }
+
+        /* ── Fade In ── */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                        transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ── CTA Section ── */
+        .cta-glow {
+            position: relative;
+        }
+        .cta-glow::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(201, 169, 97, 0.08), transparent 70%);
+            pointer-events: none;
+        }
+
+        /* ── Glassmorphism Nav ── */
+        .glass-nav {
+            background: rgba(15, 23, 42, 0.92);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* ── TOC sidebar hide on mobile ── */
+        @media (max-width: 1279px) {
+            .toc-sidebar { display: none !important; }
+        }
+
+        /* ── Responsive typography ── */
+        @media (max-width: 768px) {
+            .article-prose h2 { font-size: 1.75rem; margin-top: 3rem; }
+            .article-prose h3 { font-size: 1.25rem; }
+            .article-prose p, .article-prose li { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body class="bg-bh-black text-bh-text font-sans antialiased overflow-x-hidden selection:bg-bh-gold selection:text-black">
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-539TGQMN" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <!-- Scroll Progress -->
+    <div id="scroll-progress"></div>
+
+    <!-- ═══════════════════ NAVIGATION ═══════════════════ -->
+    <nav class="glass-nav fixed w-full z-50 transition-all duration-500 py-5">
+        <div class="container mx-auto px-6 md:px-12 flex justify-between items-center">
+            <a href="https://www.embarkfunds.com/" class="flex items-center gap-3 group">
+                <img src="https://www.embarkfunds.com/images/brand/embark-logo.webp"
+                     alt="Embark Funds"
+                     class="h-10 w-auto object-contain brightness-0 invert opacity-90 group-hover:opacity-100 transition-all duration-300">
+            </a>
+
+            <div class="hidden md:flex items-center gap-8">
+                <a href="https://www.embarkfunds.com/" class="text-xs uppercase tracking-[0.2em] text-bh-muted hover:text-white transition-colors font-medium">Home</a>
+                <a href="https://www.embarkfunds.com/calculator" class="text-xs uppercase tracking-[0.2em] text-bh-muted hover:text-white transition-colors font-medium">Calculator</a>
+                <a href="https://meetings.hubspot.com/investor-relations9?uuid=6533cbfb-8e12-4bdb-9689-d76d79993bbc"
+                   target="_blank"
+                   class="bg-bh-gold text-black px-6 py-2.5 text-xs uppercase tracking-[0.2em] font-bold hover:bg-white transition-all">
+                    Schedule Consultation
+                </a>
+            </div>
+
+            <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-bh-black/98 backdrop-blur-xl z-40 transform translate-x-full transition-transform duration-500 flex flex-col justify-center items-center space-y-8">
+        <a href="https://www.embarkfunds.com/" class="text-xl font-serif text-white hover:text-bh-gold transition-all">Home</a>
+        <a href="https://www.embarkfunds.com/calculator" class="text-xl font-serif text-white hover:text-bh-gold transition-all">Calculator</a>
+        <a href="https://meetings.hubspot.com/investor-relations9?uuid=6533cbfb-8e12-4bdb-9689-d76d79993bbc"
+           target="_blank"
+           class="bg-bh-gold text-black px-8 py-3 text-xs uppercase tracking-[0.2em] font-bold hover:bg-white transition-all">
+            Schedule Consultation
+        </a>
+    </div>
+
+
+    <!-- ═══════════════════ HERO / ARTICLE HEADER ═══════════════════ -->
+    <header class="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
+        <!-- Subtle gradient accent -->
+        <div class="absolute inset-0 bg-gradient-to-b from-bh-black via-bh-dark/30 to-bh-black"></div>
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-gradient-to-b from-bh-gold/[0.04] to-transparent rounded-full blur-3xl"></div>
+
+        <div class="relative z-10 container mx-auto px-6 md:px-12 max-w-4xl">
+            <!-- Breadcrumb -->
+            <div class="flex items-center gap-2 text-xs text-bh-muted mb-8 uppercase tracking-[0.2em]">
+                <a href="https://www.embarkfunds.com/" class="hover:text-bh-gold transition-colors">Embark Funds</a>
+                <span class="text-bh-gold/50">/</span>
+                <span class="text-bh-gold">Insights</span>
+            </div>
+
+            <!-- Category & Read Time -->
+            <div class="flex items-center gap-4 mb-6">
+                <span class="bg-bh-gold/10 text-bh-gold text-[10px] uppercase tracking-[0.2em] font-semibold px-3 py-1.5 rounded-full border border-bh-gold/20">
+                    Portfolio Strategy
+                </span>
+                <span class="text-bh-muted text-xs font-light">12 min read</span>
+            </div>
+
+            <!-- Title -->
+            <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl leading-[1.15] text-white mb-8 tracking-tight">
+                What Does "In Kind" Mean?<br>
+                <span class="text-bh-gold">A Guide for Portfolio Transfers</span>
+            </h1>
+
+            <!-- Subtitle -->
+            <p class="text-bh-muted text-lg md:text-xl font-light leading-relaxed max-w-3xl mb-10">
+                The complete guide to moving appreciated stock without triggering a taxable event — from basic ACAT transfers to Embark's income-generating SPV model.
+            </p>
+
+            <!-- Author / Date -->
+            <div class="flex items-center gap-4 pt-8 border-t border-white/5">
+                <img src="https://www.embarkfunds.com/images/brand/embark-logo.webp"
+                     alt="Embark Funds" class="w-10 h-10 rounded-full object-cover brightness-0 invert opacity-80 bg-bh-dark p-1.5">
+                <div>
+                    <p class="text-white text-sm font-medium">Embark Funds Research</p>
+                    <p class="text-bh-muted text-xs">April 2026</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- ═══════════════════ MAIN LAYOUT ═══════════════════ -->
+    <main class="container mx-auto px-6 md:px-12 max-w-7xl">
+        <div class="flex gap-16">
+
+            <!-- ── Table of Contents (Desktop Sidebar) ── -->
+            <aside class="toc-sidebar w-64 flex-shrink-0 hidden xl:block">
+                <div class="sticky top-28">
+                    <p class="text-[10px] uppercase tracking-[0.3em] text-bh-gold font-semibold mb-6">Contents</p>
+                    <nav class="space-y-0.5" id="toc-nav">
+                        <a href="#section-1"  class="toc-link" data-section="section-1"><span class="section-num">1</span>Why This Matters</a>
+                        <a href="#section-2"  class="toc-link" data-section="section-2"><span class="section-num">2</span>"In Kind" Defined</a>
+                        <a href="#section-3"  class="toc-link" data-section="section-3"><span class="section-num">3</span>Types of Transfers</a>
+                        <a href="#section-4"  class="toc-link" data-section="section-4"><span class="section-num">4</span>The ACAT Process</a>
+                        <a href="#section-5"  class="toc-link" data-section="section-5"><span class="section-num">5</span>Tax Implications</a>
+                        <a href="#section-6"  class="toc-link" data-section="section-6"><span class="section-num">6</span>Concentrated Stock</a>
+                        <a href="#section-7"  class="toc-link" data-section="section-7"><span class="section-num">7</span>Exchange Funds vs. Embark</a>
+                        <a href="#section-8"  class="toc-link" data-section="section-8"><span class="section-num">8</span>Who Should Consider</a>
+                        <a href="#section-9"  class="toc-link" data-section="section-9"><span class="section-num">9</span>Practical Checklist</a>
+                        <a href="#section-10" class="toc-link" data-section="section-10"><span class="section-num">10</span>Next Steps</a>
+                    </nav>
+
+                    <!-- Sidebar CTA -->
+                    <div class="mt-10 p-5 rounded-xl border border-bh-gold/10 bg-bh-gold/[0.03]">
+                        <p class="text-white text-sm font-medium mb-2 font-serif">Hold concentrated stock?</p>
+                        <p class="text-bh-muted text-xs mb-4 font-light leading-relaxed">See how Embark can generate 10%+ targeted income without selling.</p>
+                        <a href="https://meetings.hubspot.com/investor-relations9?uuid=6533cbfb-8e12-4bdb-9689-d76d79993bbc"
+                           target="_blank"
+                           class="block text-center bg-bh-gold text-black text-[10px] uppercase tracking-[0.2em] font-bold py-2.5 px-4 hover:bg-white transition-all">
+                            Schedule a Review
+                        </a>
+                    </div>
+                </div>
+            </aside>
+
+
+            <!-- ── Article Content ── -->
+            <article class="article-prose flex-1 max-w-3xl pb-32">
+
+                <!-- ════════════════════════════════════════════════
+                     SECTION 1 — THE HOOK
+                     ════════════════════════════════════════════════ -->
+                <section id="section-1" class="fade-in">
+                    <h2><span class="text-bh-gold/30 font-serif mr-2">01</span> Why This Matters to You</h2>
+
+                    <p>You've done everything right. You held through volatility, watched your RSUs vest, stayed loyal to a high-conviction position. Now you're sitting on $500K, $1M, maybe $5M in a single appreciated stock — and you want options.</p>
+
+                    <p>The problem is simple and painful: <strong>selling means a massive tax hit.</strong> Federal long-term capital gains rates up to 20%, plus the 3.8% Net Investment Income Tax, plus state taxes. For a California-based executive, that's potentially 37%+ of gains evaporating — before you've even reinvested a dollar.</p>
+
+                    <div class="scenario-box">
+                        <div class="flex items-center gap-3 mb-4">
+                            <i class="fa-solid fa-user-tie text-bh-gold text-lg"></i>
+                            <span class="text-[10px] uppercase tracking-[0.2em] text-bh-gold font-semibold">Scenario</span>
+                        </div>
+                        <p class="text-white text-lg font-serif mb-3">An executive holds $2M in concentrated META stock with a $200K cost basis.</p>
+                        <p class="text-bh-muted text-sm font-light leading-relaxed">She wants to diversify, generate income, and protect against downside — but selling the position would trigger approximately <strong class="text-white">$360,000+ in federal and state capital gains tax</strong>. She needs a way to move, restructure, or unlock value from the actual shares — without converting to cash first. This is where "in kind" comes in, and why solutions like <strong class="text-bh-gold">Embark Funds</strong> exist.</p>
+                    </div>
+
+                    <p>The concept is straightforward: <strong>"in kind" simply means moving the actual asset — not cash.</strong> The shares themselves transfer, your cost basis carries over, and no taxable event is triggered. What that unlocks, however, can be transformative.</p>
+                </section>
+
+
+                <!-- ════════════════════════════════════════════════
+                     SECTION 2 — DEFINED
+                     ════════════════════════════════════════════════ -->
+                <section id="section-2" class="fade-in">
+                    <h2><span class="text-bh-gold/30 font-serif mr-2">02</span> "In Kind" Defined, Plain and Simple</h2>
+
+                    <p>Across finance, <strong>"in kind"</strong> means transferring the asset itself rather than converting it to cash first. The term comes from the Latin <em>in genere</em> — "in the same form."</p>
+
+                    <h3>The Key Distinction</h3>
+
+                    <div class="grid md:grid-cols-2 gap-6 my-8">
+                        <!-- Cash Transfer -->
+                        <div class="rounded-xl border border-white/5 p-6 bg-bh-dark/30">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="w-10 h-10 rounded-lg bg-red-500/10 flex items-center justify-center">
+                                    <i class="fa-solid fa-arrow-right-arrow-left text-red-400 text-sm"></i>
+                                </div>
+                                <span class="text-xs uppercase tracking-[0.2em] text-red-400 font-semibold">Cash Transfer</span>
+                            </div>
+                            <p class="text-bh-muted text-sm font-light leading-relaxed mb-0">Sell shares → Realize gains → Pay taxes → Move cash → Rebuy shares at new cost basis</p>
+                        </div>
+                        <!-- In-Kind Transfer -->
+                        <div class="rounded-xl border border-bh-gold/15 p-6 bg-bh-gold/[0.03]">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="w-10 h-10 rounded-lg bg-bh-gold/10 flex items-center justify-center">
+                                    <i class="fa-solid fa-right-left text-bh-gold text-sm"></i>
+                                </div>
+                                <span class="text-xs uppercase tracking-[0.2em] text-bh-gold font-semibold">In-Kind Transfer</span>
+                            </div>
+                            <p class="text-bh-muted text-sm font-light leading-relaxed mb-0">Shares move directly → Cost basis carries over → No taxable event → Position stays intact</p>
+                        </div>
+                    </div>
+
+                    <p>Why does this matter practically? Because <strong>your cost basis carries over, no taxable event is triggered, and your position stays intact</strong>. You maintain the same lot dates, the same holding period, and the same unrealized gain — just in a different account or structure.</p>
+
+                    <div class="callout-box">
+                        <p><i class="fa-solid fa-lightbulb text-bh-gold mr-2"></i> <strong>Key Takeaway:</strong> An in-kind transfer moves the investment without disrupting its tax characteristics. Think of it as changing the envelope without touching the letter inside.</p>
+                    </div>
+                </section>
+
+
+                <!-- ════════════════════════════════════════════════
+                     SECTION 3 — TYPES
+                     ════════════════════════════════════════════════ -->
+                <section id="section-3" class="fade-in">
+                    <h2><span class="text-bh-gold/30 font-serif mr-2">03</span> Types of In-Kind Transfers</h2>
+
+                    <p>Not all in-kind transfers are the same. Here are the four primary categories:</p>
+
+                    <div class="space-y-6 my-8">
+                        <!-- Type 1 -->
+                        <div class="rounded-xl border border-white/5 p-6 bg-bh-dark/20 hover:border-bh-gold/15 transition-all duration-300">
+                            <div class="flex items-start gap-4">
+                                <span class="section-num mt-1">1</span>
+                                <div>
+                                    <h3 class="text-white text-lg font-serif mt-0 mb-2">Broker-to-Broker Transfers (ACAT/ACATS)</h3>
+                                    <p class="text-bh-muted text-sm font-light mb-0">The most common type. Moving your portfolio from one brokerage to another using the Automated Customer Account Transfer Service. Your stocks, ETFs, bonds, and options move electronically without liquidation.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Type 2 -->
+                        <div class="rounded-xl border border-white/5 p-6 bg-bh-dark/20 hover:border-bh-gold/15 transition-all duration-300">
+                            <div class="flex items-start gap-4">
+                                <span class="section-num mt-1">2</span>
+                                <div>
+                                    <h3 class="text-white text-lg font-serif mt-0 mb-2">IRA-to-IRA Rollovers</h3>
+                                    <p class="text-bh-muted text-sm font-light mb-0">Transferring retirement account holdings between custodians. Securities move directly — no distribution, no tax withholding, no 60-day rollover window risk.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Type 3 -->
+                        <div class="rounded-xl border border-white/5 p-6 bg-bh-dark/20 hover:border-bh-gold/15 transition-all duration-300">
+                            <div class="flex items-start gap-4">
+                                <span class="section-num mt-1">3</span>
+                                <div>
+                                    <h3 class="text-white text-lg font-serif mt-0 mb-2">In-Kind Contributions into Funds or Structured Vehicles</h3>
+                                    <p class="text-bh-muted text-sm font-light mb-0">Contributing actual shares into exchange funds, SPVs, or similar investment vehicles. Under Section 351 of the tax code, this can be done without triggering a taxable event — the basis of the contributed stock carries over into the new entity. <strong class="text-bh-gold">This is the mechanism Embark Funds uses.</strong></p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Type 4 -->
+                        <div class="rounded-xl border border-white/5 p-6 bg-bh-dark/20 hover:border-bh-gold/15 transition-all duration-300">
+                            <div class="flex items-start gap-4">
+                                <span class="section-num mt-1">4</span>
+                                <div>
+                                    <h3 class="text-white text-lg font-serif mt-0 mb-2">In-Kind Distributions</h3>
+                                    <p class="text-bh-muted text-sm font-light mb-0">Receiving actual securities instead of cash from a fund, trust, or estate. Common in inherited portfolios or when redeeming from certain pooled investment vehicles.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+                <!-- ════════════════════════════════════════════════
+                     SECTION 4 — THE ACAT PROCESS
+                     ════════════════════════════════════════════════ -->
+                <section id="section-4" class="fade-in">
+                    <h2><span class="text-bh-gold/30 font-serif mr-2">04</span> The ACAT Process: How It Actually Works</h2>
+
+                    <p>The Automated Customer Account Transfer Service (ACATS) is the industry-standard system for moving assets between brokerages. Here's what actually happens:</p>
+
+                    <div class="relative my-10 pl-8 border-l-2 border-bh-gold/20">
+                        <!-- Step 1 -->
+                        <div class="mb-10 relative">
+                            <div class="absolute -left-[2.6rem] top-0 w-10 h-10 rounded-full bg-bh-black border-2 border-bh-gold/40 flex items-center justify-center text-bh-gold text-xs font-bold">1</div>
+                            <h3 class="text-white text-base font-medium mt-0 mb-1">Open the Receiving Account</h3>
+                            <p class="text-bh-muted text-sm font-light mb-0">Set up your new brokerage account. Ensure the account type matches — taxable to taxable, IRA to IRA.</p>
+                        </div>
+                        <!-- Step 2 -->
+                        <div class="mb-10 relative">
+                            <div class="absolute -left-[2.6rem] top-0 w-10 h-10 rounded-full bg-bh-black border-2 border-bh-gold/40 flex items-center justify-center text-bh-gold text-xs font-bold">2</div>
+                            <h3 class="text-white text-base font-medium mt-0 mb-1">Submit Transfer Initiation Form (TIF)</h3>
+                            <p class="text-bh-muted text-sm font-light mb-0">The receiving broker initiates the request. You'll provide your sending account number, firm name, and specify full or partial transfer.</p>
+                        </div>
+                        <!-- Step 3 -->
+                        <div class="mb-10 relative">
+                            <div class="absolute -left-[2.6rem] top-0 w-10 h-10 rounded-full bg-bh-black border-2 border-bh-gold/40 flex items-center justify-center text-bh-gold text-xs font-bold">3</div>
+                            <h3 class="text-white text-base font-medium mt-0 mb-1">Brokers Coordinate via ACATS</h3>
+                            <p class="text-bh-muted text-sm font-light mb-0">The sending and receiving firms validate your holdings, reconcile positions, and handle the electronic transfer through NSCC's system.</p>
+                        </div>
+                        <!-- Step 4 -->
+                        <div class="relative">
+                            <div class="absolute -left-[2.6rem] top-0 w-10 h-10 rounded-full bg-bh-black border-2 border-bh-gold flex items-center justify-center text-bh-gold text-xs font-bold">4</div>
+                            <h3 class="text-white text-base font-medium mt-0 mb-1">Assets Land in Your New Account</h3>
+                            <p class="text-bh-muted text-sm font-light mb-0">Typically <strong class="text-white">3–6 business days</strong>. Same shares, same cost basis, same holding periods — just a new custodian.</p>
+                        </div>
+                    </div>
+
+                    <h3>What Transfers Cleanly — and What Doesn't</h3>
+
+                    <div class="grid md:grid-cols-2 gap-6 my-6">
+                        <div class="rounded-xl border border-green-500/10 p-5 bg-green-500/[0.03]">
+                            <p class="text-green-400 text-xs uppercase tracking-[0.2em] font-semibold mb-3"><i class="fa-solid fa-circle-check mr-2"></i>Transfers Smoothly</p>
+                            <ul class="text-bh-muted text-sm font-light space-y-2 list-none pl-0">
+                                <li>→ Individual stocks & ETFs</li>
+                                <li>→ Corporate & government bonds</li>
+                                <li>→ Standard mutual funds</li>
+                                <li>→ Options contracts</li>
+                                <li>→ Treasury securities</li>
+                            </ul>
+                        </div>
+                        <div class="rounded-xl border border-red-500/10 p-5 bg-red-500/[0.03]">
+                            <p class="text-red-400 text-xs uppercase tracking-[0.2em] font-semibold mb-3"><i class="fa-solid fa-circle-xmark mr-2"></i>May Not Transfer</p>
+                            <ul class="text-bh-muted text-sm font-light space-y-2 list-none pl-0">
+                                <li>→ Proprietary mutual funds</li>
+                                <li>→ Cryptocurrency</li>
+                                <li>→ Certain CDs with early withdrawal penalties</li>
+                                <li>→ Annuities held at the sending institution</li>
+                                <li>→ Limited partnerships with transfer restrictions</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="callout-box">
+                        <p><i class="fa-solid fa-triangle-exclamation text-bh-gold mr-2"></i> <strong>Common Pitfalls:</strong> Pending trades, active DRIPs (Dividend Reinvestment Plans), and margin balances can delay or block your transfer. Settle all open trades and disable automatic features before initiating.</p>
+                    </div>
+                </section>
+
+
+                <!-- ════════════════════════════════════════════════
+                     SECTION 5 — TAX IMPLICATIONS
+                     ════════════════════════════════════════════════ -->
+                <section id="section-5" class="fade-in">
+                    <h2><span class="text-bh-gold/30 font-serif mr-2">05</span> Tax Implications: The Real Reason People Transfer In Kind</h2>
+
+                    <p>This is the section that matters most. The entire value proposition of an in-kind transfer — whether it's a simple ACAT or a contribution into a structured vehicle — comes down to one principle:</p>
+
+                    <div class="callout-box">
+                        <p class="text-xl font-serif text-white"><strong>No capital gains are triggered at the point of transfer.</strong></p>
+                    </div>
+
+                    <p>Your cost basis and holding period carry over to the new account or entity. The IRS treats it as if nothing changed — because, in an economic sense, it didn't. You still own the same position.</p>
+
+                    <h3>The Math That Changes Everything</h3>
+
+                    <div class="scenario-box">
+                        <div class="flex items-center gap-3 mb-6">
+                            <i class="fa-solid fa-calculator text-bh-gold text-lg"></i>
+                            <span class="text-[10px] uppercase tracking-[0.2em] text-bh-gold font-semibold">Tax Comparison</span>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <!-- Sell & Diversify -->
+                            <div class="border border-red-500/15 rounded-xl p-5 bg-red-500/[0.02]">
+                                <p class="text-red-400 text-xs uppercase tracking-[0.2em] font-semibold mb-4">Sell & Diversify</p>
+                                <div class="space-y-2 text-sm">
+                                    <div class="flex justify-between"><span class="text-bh-muted font-light">Position Value</span><span class="text-white">$1,000,000</span></div>
+                                    <div class="flex justify-between"><span class="text-bh-muted font-light">Cost Basis</span><span class="text-white">$200,000</span></div>
+                                    <div class="flex justify-between"><span class="text-bh-muted font-light">Realized Gain</span><span class="text-white">$800,000</span></div>
+                                    <div class="flex justify-between border-t border-red-500/10 pt-2 mt-2"><span class="text-bh-muted font-light">Federal + State Tax</span><span class="text-red-400 font-bold text-lg">~$160,000+</span></div>
+                                </div>
+                            </div>
+                            <!-- In-Kind Transfer -->
+                            <div class="border border-bh-gold/15 rounded-xl p-5 bg-bh-gold/[0.02]">
+                                <p class="text-bh-gold text-xs uppercase tracking-[0.2em] font-semibold mb-4">In-Kind Transfer</p>
+                                <div class="space-y-2 text-sm">
+                                    <div class="flex justify-between"><span class="text-bh-muted font-light">Position Value</span><span class="text-white">$1,000,000</span></div>
+                                    <div class="flex justify-between"><span class="text-bh-muted font-light">Cost Basis</span><span class="text-white">$200,000 (carries over)</span></div>
+                                    <div class="flex justify-between"><span class="text-bh-muted font-light">Realized Gain</span><span class="text-white">$0</span></div>
+                                    <div class="flex justify-between border-t border-bh-gold/10 pt-2 mt-2"><span class="text-bh-muted font-light">Tax at Transfer</span><span class="text-bh-gold font-bold text-lg">$0</span></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="text-bh-muted text-sm font-light mt-6 mb-0">That's <strong class="text-white">$160,000 preserved</strong> — still invested, still compounding. At 7% annual growth, that single tax deferral is worth over $315,000 in 10 years.</p>
+                    </div>
+
+                    <h3>Section 351 Exchanges</h3>
+                    <p>When contributing appreciated stock into a fund or SPV, <strong>Section 351 of the Internal Revenue Code</strong> allows for tax-free transfers — provided the contributor(s) collectively control 80% or more of the receiving entity. This is the legal framework that makes in-kind contributions to exchange funds and vehicles like Embark's SPVs possible without triggering recognition of gains.</p>
+
+                    <p>This mechanism is why Embark's in-kind contribution model is so powerful for concentrated stock holders: you contribute shares, defer taxes, and immediately begin earning income on the full pre-tax value of your position.</p>
+                </section>
+
+
+                <!-- ═════ CALCULATOR IFRAME ═════ -->
+                <section class="my-16 fade-in" id="calculator-embed">
+                    <div class="text-center mb-10">
+                        <span class="text-[10px] uppercase tracking-[0.3em] text-bh-gold font-semibold">Interactive Tool</span>
+                        <h3 class="text-3xl font-serif text-white mt-3 mb-3">See the Numbers for Yourself</h3>
+                        <p class="text-bh-muted font-light text-base max-w-xl mx-auto">Model how Embark can unlock liquidity and generate yield from your appreciated assets — without triggering a taxable event.</p>
+                    </div>
+                    <div class="calculator-embed">
+                        <iframe src="https://www.embarkfunds.com/calculator"
+                                title="Embark Exchange Fund Calculator"
+                                width="100%"
+                                height="750"
+                                style="border: none; display: block;"
+                                loading="lazy">
+                        </iframe>
+                    </div>
+                </section>
+
+
+                <!-- ════════════════════════════════════════════════
+                     SECTION 6 — CONCENTRATED STOCK + EMBARK
+                     ════════════════════════════════════════════════ -->
+                <section id="section-6" class="fade-in">
+                    <h2><span class="text-bh-gold/30 font-serif mr-2">06</span> In-Kind Transfers for Concentrated Stock Holders</h2>
+
+                    <p>Here's where the conversation gets specific. If you're a founder, executive, or early employee, you likely have <strong>40–70% of your net worth tied up in a single stock</strong>. The traditional options each come with trade-offs:</p>
+
+                    <div class="space-y-4 my-8">
+                        <div class="flex items-start gap-4 p-5 rounded-xl border border-white/5 bg-bh-dark/20">
+                            <i class="fa-solid fa-hand text-bh-muted mt-1"></i>
+                            <div>
+                                <p class="text-white text-sm font-medium mb-1">Hold and Hope</p>
+                                <p class="text-bh-muted text-sm font-light mb-0">Maximum upside exposure, but zero income, zero diversification, and full downside risk. You're betting everything on a single outcome.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 p-5 rounded-xl border border-white/5 bg-bh-dark/20">
+                            <i class="fa-solid fa-money-bill-transfer text-bh-muted mt-1"></i>
+                            <div>
+                                <p class="text-white text-sm font-medium mb-1">Sell and Diversify</p>
+                                <p class="text-bh-muted text-sm font-light mb-0">Immediate tax hit (potentially 37%+ of gains). You gain diversification but lose your position and a significant portion of your wealth to taxes.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 p-5 rounded-xl border border-white/5 bg-bh-dark/20">
+                            <i class="fa-solid fa-clock text-bh-muted mt-1"></i>
+                            <div>
+                                <p class="text-white text-sm font-medium mb-1">Exchange Fund</p>
+                                <p class="text-bh-muted text-sm font-light mb-0">Tax-deferred diversification, but a 7-year lockup, no income generation, and you lose exposure to your high-conviction position.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 class="text-bh-gold">The Embark Approach</h3>
+
+                    <p>Embark Funds offers a different path: <strong>contribute your appreciated stock in kind into a single-stock SPV (Special Purpose Vehicle)</strong>. Here's what happens:</p>
+
+                    <div class="space-y-4 my-8">
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-full bg-bh-gold/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i class="fa-solid fa-arrow-right text-bh-gold text-xs"></i>
+                            </div>
+                            <p class="text-bh-muted text-base font-light mb-0"><strong class="text-white">No taxable event</strong> — your shares transfer in kind under Section 351</p>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-full bg-bh-gold/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i class="fa-solid fa-arrow-right text-bh-gold text-xs"></i>
+                            </div>
+                            <p class="text-bh-muted text-base font-light mb-0"><strong class="text-white">10%+ targeted income</strong> — the SPV runs sophisticated option-overlay strategies, generating consistent yield</p>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-full bg-bh-gold/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i class="fa-solid fa-arrow-right text-bh-gold text-xs"></i>
+                            </div>
+                            <p class="text-bh-muted text-base font-light mb-0"><strong class="text-white">Retain upside exposure</strong> — you keep your position in the stock you believe in</p>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-full bg-bh-gold/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i class="fa-solid fa-arrow-right text-bh-gold text-xs"></i>
+                            </div>
+                            <p class="text-bh-muted text-base font-light mb-0"><strong class="text-white">Downside protection</strong> — built-in hedging strategies protect principal</p>
+                        </div>
+                    </div>
+
+                    <div class="callout-box">
+                        <p><i class="fa-solid fa-circle-info text-bh-gold mr-2"></i> <strong>Key Difference:</strong> Unlike a standard ACAT broker-to-broker transfer (which simply moves your shares to a new custodian), Embark's in-kind contribution gives your shares a job — earning income while maintaining tax efficiency and exposure to upside.</p>
+                    </div>
+                </section>
+
+
+                <!-- ════════════════════════════════════════════════
+                     SECTION 7 — COMPARISON TABLE
+                     ════════════════════════════════════════════════ -->
+                <section id="section-7" class="fade-in">
+                    <h2><span class="text-bh-gold/30 font-serif mr-2">07</span> Exchange Funds vs. Embark's SPV Model</h2>
+
+                    <p>Both exchange funds and Embark Funds use in-kind contributions. But the similarities largely end there. Here's how they compare for a concentrated stock holder:</p>
+
+                    <!-- Comparison Table -->
+                    <div class="overflow-x-auto my-10 rounded-xl border border-white/5 bg-bh-dark/20">
+                        <table class="comparison-table" style="min-width: 650px;">
+                            <thead>
+                                <tr>
+                                    <th class="w-[30%]">Factor</th>
+                                    <th class="w-[35%]">Exchange Fund</th>
+                                    <th class="w-[35%]">
+                                        <span class="text-bh-gold">Embark Funds (SPV)</span>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="row-label">Lockup Period</td>
+                                    <td>7 years (mandatory)</td>
+                                    <td class="embark-col">Flexible terms</td>
+                                </tr>
+                                <tr>
+                                    <td class="row-label">Income Generation</td>
+                                    <td>None — no yield</td>
+                                    <td class="embark-col">10%+ targeted annual income</td>
+                                </tr>
+                                <tr>
+                                    <td class="row-label">Tax Treatment</td>
+                                    <td>Tax-deferred (Section 351)</td>
+                                    <td class="embark-col">Tax-deferred (Section 351)</td>
+                                </tr>
+                                <tr>
+                                    <td class="row-label">Downside Protection</td>
+                                    <td>Diversified basket (diluted)</td>
+                                    <td class="embark-col">Active hedging on the position</td>
+                                </tr>
+                                <tr>
+                                    <td class="row-label">Control Over Position</td>
+                                    <td>Lost — shares pooled across investors</td>
+                                    <td class="embark-col">Retained — single-stock SPV</td>
+                                </tr>
+                                <tr>
+                                    <td class="row-label">Upside Participation</td>
+                                    <td>Diluted across basket</td>
+                                    <td class="embark-col">Full — keep high-conviction exposure</td>
+                                </tr>
+                                <tr>
+                                    <td class="row-label">Diversification</td>
+                                    <td>Yes (forced)</td>
+                                    <td class="embark-col">No — by design; maintain conviction</td>
+                                </tr>
+                                <tr>
+                                    <td class="row-label">Minimum Qualification</td>
+                                    <td>Typically $500K+, accredited</td>
+                                    <td class="embark-col">Qualified, accredited investors</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p>The fundamental difference: exchange funds solve for diversification by forcing you out of your position. <strong>Embark solves for income and protection while keeping you in your position.</strong> If your conviction in the underlying stock is high — and you want that stock to work harder — the SPV model is structurally different.</p>
+                </section>
+
+
+                <!-- ════════════════════════════════════════════════
+                     INFOGRAPHIC — FLOWCHART
+                     ════════════════════════════════════════════════ -->
+                <section class="my-20 fade-in" id="flowchart">
+                    <div class="text-center mb-12">
+                        <span class="text-[10px] uppercase tracking-[0.3em] text-bh-gold font-semibold">Decision Framework</span>
+                        <h3 class="text-3xl font-serif text-white mt-3 mb-3">Which Type of In-Kind Transfer Is Right for You?</h3>
+                    </div>
+
+                    <!-- Flowchart -->
+                    <div class="max-w-3xl mx-auto">
+                        <!-- Start Node -->
+                        <div class="flowchart-card border-bh-gold/30 bg-bh-gold/[0.05] mb-2">
+                            <i class="fa-solid fa-question-circle text-bh-gold text-2xl mb-3"></i>
+                            <p class="text-white font-serif text-lg mb-1">What's your primary goal?</p>
+                            <p class="text-bh-muted text-sm font-light mb-0">I hold appreciated stock and want to…</p>
+                        </div>
+
+                        <!-- Arrow -->
+                        <div class="flowchart-arrow"><i class="fa-solid fa-chevron-down"></i></div>
+
+                        <!-- Three Branches -->
+                        <div class="grid md:grid-cols-3 gap-4">
+                            <!-- Branch 1: ACAT -->
+                            <div class="flowchart-card group">
+                                <div class="w-12 h-12 rounded-full bg-blue-500/10 flex items-center justify-center mx-auto mb-4">
+                                    <i class="fa-solid fa-building-columns text-blue-400"></i>
+                                </div>
+                                <p class="text-white text-sm font-medium mb-2">Switch Brokers</p>
+                                <p class="text-bh-muted text-xs font-light mb-4">Move my portfolio to a new custodian</p>
+                                <div class="inline-block bg-blue-500/10 text-blue-400 text-[10px] uppercase tracking-[0.15em] font-semibold px-3 py-1.5 rounded-full">
+                                    ACAT Transfer
+                                </div>
+                                <p class="text-bh-muted text-[11px] font-light mt-3 mb-0">3–6 days · No tax event · Standard process</p>
+                            </div>
+
+                            <!-- Branch 2: Exchange Fund -->
+                            <div class="flowchart-card group">
+                                <div class="w-12 h-12 rounded-full bg-purple-500/10 flex items-center justify-center mx-auto mb-4">
+                                    <i class="fa-solid fa-shuffle text-purple-400"></i>
+                                </div>
+                                <p class="text-white text-sm font-medium mb-2">Diversify Without Selling</p>
+                                <p class="text-bh-muted text-xs font-light mb-4">Reduce concentration risk tax-free</p>
+                                <div class="inline-block bg-purple-500/10 text-purple-400 text-[10px] uppercase tracking-[0.15em] font-semibold px-3 py-1.5 rounded-full">
+                                    Exchange Fund
+                                </div>
+                                <p class="text-bh-muted text-[11px] font-light mt-3 mb-0">7-yr lockup · No income · Forced diversification</p>
+                            </div>
+
+                            <!-- Branch 3: Embark -->
+                            <div class="flowchart-card border-bh-gold/20 group">
+                                <div class="w-12 h-12 rounded-full bg-bh-gold/10 flex items-center justify-center mx-auto mb-4">
+                                    <i class="fa-solid fa-chart-line text-bh-gold"></i>
+                                </div>
+                                <p class="text-white text-sm font-medium mb-2">Earn Income from My Stock</p>
+                                <p class="text-bh-muted text-xs font-light mb-4">Generate yield without selling shares</p>
+                                <div class="inline-block bg-bh-gold/10 text-bh-gold text-[10px] uppercase tracking-[0.15em] font-semibold px-3 py-1.5 rounded-full">
+                                    Embark SPV
+                                </div>
+                                <p class="text-bh-muted text-[11px] font-light mt-3 mb-0">10%+ income · Keep position · Downside hedge</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+                <!-- ════════════════════════════════════════════════
+                     SECTION 8 — WHO SHOULD CONSIDER
+                     ════════════════════════════════════════════════ -->
+                <section id="section-8" class="fade-in">
+                    <h2><span class="text-bh-gold/30 font-serif mr-2">08</span> Who Should Consider In-Kind Transfers?</h2>
+
+                    <p>In-kind transfers aren't just for the ultra-wealthy. They're relevant for anyone holding appreciated securities who wants to restructure, move, or unlock value without selling. But they're particularly powerful for:</p>
+
+                    <div class="grid md:grid-cols-2 gap-6 my-8">
+                        <div class="p-6 rounded-xl border border-white/5 bg-bh-dark/20 hover:border-bh-gold/15 transition-all duration-300">
+                            <div class="w-12 h-12 rounded-xl bg-bh-gold/10 flex items-center justify-center mb-4">
+                                <i class="fa-solid fa-chart-line text-bh-gold text-lg"></i>
+                            </div>
+                            <h3 class="text-white text-base font-medium mt-0 mb-2">Long-Term Holders</h3>
+                            <p class="text-bh-muted text-sm font-light mb-0">Investors with significant unrealized gains who have held for years and face substantial tax liability if they sell.</p>
+                        </div>
+                        <div class="p-6 rounded-xl border border-white/5 bg-bh-dark/20 hover:border-bh-gold/15 transition-all duration-300">
+                            <div class="w-12 h-12 rounded-xl bg-bh-gold/10 flex items-center justify-center mb-4">
+                                <i class="fa-solid fa-briefcase text-bh-gold text-lg"></i>
+                            </div>
+                            <h3 class="text-white text-base font-medium mt-0 mb-2">Founders & Executives</h3>
+                            <p class="text-bh-muted text-sm font-light mb-0">Individuals with concentrated equity from RSUs, stock options, or founder shares who need diversification or income without triggering recognition.</p>
+                        </div>
+                        <div class="p-6 rounded-xl border border-white/5 bg-bh-dark/20 hover:border-bh-gold/15 transition-all duration-300">
+                            <div class="w-12 h-12 rounded-xl bg-bh-gold/10 flex items-center justify-center mb-4">
+                                <i class="fa-solid fa-building text-bh-gold text-lg"></i>
+                            </div>
+                            <h3 class="text-white text-base font-medium mt-0 mb-2">Family Offices</h3>
+                            <p class="text-bh-muted text-sm font-light mb-0">Entities managing generational wealth across multiple custodians, needing tax-efficient consolidation or income strategies.</p>
+                        </div>
+                        <div class="p-6 rounded-xl border border-white/5 bg-bh-dark/20 hover:border-bh-gold/15 transition-all duration-300">
+                            <div class="w-12 h-12 rounded-xl bg-bh-gold/10 flex items-center justify-center mb-4">
+                                <i class="fa-solid fa-rocket text-bh-gold text-lg"></i>
+                            </div>
+                            <h3 class="text-white text-base font-medium mt-0 mb-2">Early Employees</h3>
+                            <p class="text-bh-muted text-sm font-light mb-0">Holders of pre-IPO or post-IPO stock looking to monetize their equity without selling their shares or triggering a taxable event.</p>
+                        </div>
+                    </div>
+                </section>
+
+
+                <!-- ════════════════════════════════════════════════
+                     SECTION 9 — CHECKLIST
+                     ════════════════════════════════════════════════ -->
+                <section id="section-9" class="fade-in">
+                    <h2><span class="text-bh-gold/30 font-serif mr-2">09</span> Practical Checklist: Before You Initiate</h2>
+
+                    <p>Whether you're moving assets between brokers or contributing into a structured vehicle, run through this list before you start:</p>
+
+                    <div class="my-8 p-8 rounded-xl border border-white/5 bg-bh-dark/20">
+                        <div class="checklist-item">
+                            <div class="check-icon"><i class="fa-solid fa-check"></i></div>
+                            <div>
+                                <p class="text-white text-sm font-medium mb-0.5">Confirm asset eligibility</p>
+                                <p class="text-bh-muted text-sm font-light mb-0">Verify that both the sending and receiving institutions support in-kind transfer of your specific securities.</p>
+                            </div>
+                        </div>
+                        <div class="checklist-item">
+                            <div class="check-icon"><i class="fa-solid fa-check"></i></div>
+                            <div>
+                                <p class="text-white text-sm font-medium mb-0.5">Disable automatic features</p>
+                                <p class="text-bh-muted text-sm font-light mb-0">Turn off DRIP (Dividend Reinvestment Plans), recurring investments, and auto-rebalancing before initiating.</p>
+                            </div>
+                        </div>
+                        <div class="checklist-item">
+                            <div class="check-icon"><i class="fa-solid fa-check"></i></div>
+                            <div>
+                                <p class="text-white text-sm font-medium mb-0.5">Settle open trades and margin</p>
+                                <p class="text-bh-muted text-sm font-light mb-0">Close all pending trades and resolve any margin balances or obligations.</p>
+                            </div>
+                        </div>
+                        <div class="checklist-item">
+                            <div class="check-icon"><i class="fa-solid fa-check"></i></div>
+                            <div>
+                                <p class="text-white text-sm font-medium mb-0.5">Verify account types match</p>
+                                <p class="text-bh-muted text-sm font-light mb-0">IRA to IRA, taxable to taxable. Mismatched account types can trigger unintended tax consequences.</p>
+                            </div>
+                        </div>
+                        <div class="checklist-item">
+                            <div class="check-icon"><i class="fa-solid fa-check"></i></div>
+                            <div>
+                                <p class="text-white text-sm font-medium mb-0.5">Document cost basis and holding periods</p>
+                                <p class="text-bh-muted text-sm font-light mb-0">Screenshot or export your lot-level cost basis data for your records. Don't rely solely on the receiving broker to get it right.</p>
+                            </div>
+                        </div>
+                        <div class="checklist-item">
+                            <div class="check-icon"><i class="fa-solid fa-check"></i></div>
+                            <div>
+                                <p class="text-white text-sm font-medium mb-0.5">Consult a tax advisor for fund contributions</p>
+                                <p class="text-bh-muted text-sm font-light mb-0">If you're contributing into a structured vehicle (exchange fund, SPV), work with a qualified tax professional to ensure compliance with Section 351 and applicable regulations.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+                <!-- ════════════════════════════════════════════════
+                     SECTION 10 — CTA
+                     ════════════════════════════════════════════════ -->
+                <section id="section-10" class="fade-in">
+                    <h2><span class="text-bh-gold/30 font-serif mr-2">10</span> Your Next Step</h2>
+
+                    <p>In-kind transfers preserve your position, your cost basis, and your tax standing. Whether you're simply switching brokerages or structuring a more sophisticated solution, the principle is the same: <strong>move the asset, not cash.</strong></p>
+
+                    <p>If you hold concentrated appreciated stock and want to generate income without selling, Embark Funds offers a structured, tax-efficient path — backed by professional management and institutional-grade execution.</p>
+                </section>
+
+
+                <!-- ═══════════ FINAL CTA BLOCK ═══════════ -->
+                <section class="my-20 cta-glow fade-in">
+                    <div class="relative rounded-2xl border border-bh-gold/15 bg-gradient-to-br from-bh-dark/80 to-bh-black overflow-hidden p-10 md:p-14 text-center">
+                        <!-- Accent line -->
+                        <div class="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-bh-gold to-transparent"></div>
+
+                        <!-- Logo -->
+                        <img src="https://www.embarkfunds.com/images/brand/embark-logo.webp" alt="Embark Funds" class="h-12 w-auto mx-auto brightness-0 invert opacity-70 mb-8">
+
+                        <h3 class="font-serif text-3xl md:text-4xl text-white mb-4">Ready to Put Your Stock to Work?</h3>
+                        <p class="text-bh-muted font-light text-base max-w-xl mx-auto mb-10">Schedule a portfolio review to see how Embark's in-kind contribution model can generate 10%+ targeted income from your concentrated position — with no taxable event.</p>
+
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                            <a href="https://meetings.hubspot.com/investor-relations9?uuid=6533cbfb-8e12-4bdb-9689-d76d79993bbc"
+                               target="_blank"
+                               class="bg-bh-gold text-black px-10 py-4 uppercase tracking-[0.25em] text-xs font-bold hover:bg-white transition-all inline-block">
+                                Schedule Consultation
+                            </a>
+                            <a href="https://www.embarkfunds.com/calculator"
+                               class="border-2 border-white/20 px-10 py-4 uppercase tracking-[0.25em] text-xs font-bold hover:border-bh-gold hover:bg-bh-gold/5 transition-all text-white inline-block">
+                                Try the Calculator
+                            </a>
+                        </div>
+
+                        <p class="text-bh-muted/60 text-[11px] mt-8 mb-0">
+                            <a href="mailto:investor.relations@embarkfunds.com" class="hover:text-bh-gold transition-colors">investor.relations@embarkfunds.com</a>
+                            &nbsp;·&nbsp;
+                            <a href="tel:+13022814715" class="hover:text-bh-gold transition-colors">+1 (302) 281-4715</a>
+                        </p>
+                    </div>
+                </section>
+
+            </article>
+        </div>
+    </main>
+
+
+    <!-- ═══════════════════ FOOTER ═══════════════════ -->
+    <footer class="bg-bh-black py-16 text-xs text-bh-muted border-t border-white/5">
+        <div class="container mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex flex-wrap justify-center gap-8 uppercase tracking-wider">
+                <a href="https://www.embarkfunds.com/"        class="hover:text-white transition-colors font-medium">Home</a>
+                <a href="https://www.embarkfunds.com/terms"   class="hover:text-white transition-colors font-medium">Terms</a>
+                <a href="https://www.embarkfunds.com/privacy" class="hover:text-white transition-colors font-medium">Privacy</a>
+            </div>
+            <div class="text-center md:text-right opacity-60">
+                <p>&copy; 2026 Embark Funds. All rights reserved.</p>
+                <p class="mt-2 text-[10px]">All investment strategies involve risk, including the potential loss of principal.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- ═══════════════════ SCRIPTS ═══════════════════ -->
+    <script>
+        // ── Scroll Progress Bar ──
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPercent = (scrollTop / docHeight) * 100;
+            document.getElementById('scroll-progress').style.width = scrollPercent + '%';
+        });
+
+        // ── Fade-in on scroll ──
+        const fadeObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+        document.querySelectorAll('.fade-in').forEach(el => fadeObserver.observe(el));
+
+        // ── Active TOC tracking ──
+        const tocLinks = document.querySelectorAll('.toc-link');
+        const sections = [];
+        tocLinks.forEach(link => {
+            const id = link.getAttribute('data-section');
+            const section = document.getElementById(id);
+            if (section) sections.push({ id, el: section, link });
+        });
+
+        window.addEventListener('scroll', () => {
+            const scrollPos = window.scrollY + 200;
+            let current = '';
+            sections.forEach(s => {
+                if (s.el.offsetTop <= scrollPos) current = s.id;
+            });
+            tocLinks.forEach(link => {
+                link.classList.toggle('active', link.getAttribute('data-section') === current);
+            });
+        });
+
+        // ── Mobile menu ──
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        let menuOpen = false;
+
+        menuBtn.addEventListener('click', () => {
+            menuOpen = !menuOpen;
+            if (menuOpen) {
+                mobileMenu.classList.remove('translate-x-full');
+                menuBtn.innerHTML = '<i class="fa-solid fa-xmark text-2xl"></i>';
+                document.body.style.overflow = 'hidden';
+            } else {
+                mobileMenu.classList.add('translate-x-full');
+                menuBtn.innerHTML = '<i class="fa-solid fa-bars text-2xl"></i>';
+                document.body.style.overflow = '';
+            }
+        });
+
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuOpen = false;
+                mobileMenu.classList.add('translate-x-full');
+                menuBtn.innerHTML = '<i class="fa-solid fa-bars text-2xl"></i>';
+                document.body.style.overflow = '';
+            });
+        });
+
+        // ── Smooth scroll for TOC links ──
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
